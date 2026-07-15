@@ -1,6 +1,9 @@
 import dotenv from "dotenv";
 import app from "./app.js";
 import connectDB from "./config/db.js";
+import journalRoutes from "./routes/journal.routes.js";
+
+app.use("/api/journals", journalRoutes);
 
 dotenv.config();
 
